@@ -10,7 +10,7 @@
     "dev": "nodemon --exec yarn build-and-start --ignore ./tmp --ignore ./dist --ignore ./data"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
