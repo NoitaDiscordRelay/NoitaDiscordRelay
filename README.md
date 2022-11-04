@@ -13,7 +13,7 @@ You'll need node.js installed. NDR was built for node.js version 16, but may wor
 5. At this point, the relay is "installed"
 
 ## Configuration
-You'll need to have a Discord bot already setup (https://discord.com/developers/applications) and obtain your bots access token.
+You'll need to have a Discord bot already setup (https://discord.com/developers/applications) and obtain your bots access token. You will need to enable all three "Privileged Gateway Intents" so the bot can function.
 
 Create a file in the NDR folder called `start.bat`, and inside this file put the following - replacing the `XXXXXXX` with your bot token:
 ```
