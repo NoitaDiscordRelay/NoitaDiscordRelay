@@ -19,7 +19,7 @@ Create a file in the NDR folder called `start.bat`, and inside this file put the
 ```
 @echo off
 set DISCORD_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-set PID_FILE=%HOME%\noita-relay-pidfile
+set PID_FILE=%USERPROFILE%\noita-relay-pidfile
 npm start
 ```
 
