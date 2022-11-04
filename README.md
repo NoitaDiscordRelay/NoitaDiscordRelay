@@ -26,6 +26,12 @@ npm start
 ## Running
 Once you've got everything installed, built, and configured. You should simply be able to double click your `start.bat` file and it will launch to bot. The final step is to configure your hosts file as described on the https://ndr.thcgaming.co.uk/ page. However, instead of using `157.245.29.152`, you will need to use `127.0.0.1`
 
+## Invite your bot
+Now your bot is running, you simply have to invite it to your server. To do this you can use the https://discordapi.com/permissions.html calculator - you'll need to provide it your bot's Client ID and it will provide a link you can visit to invite your bot.
+
+### What permissions?
+Honestly, I don't recall exactly what permissions NDR requires - it will at the very very very least require "Send Messages" and "Add Reactions", although may require more. If you trust the code enough, you can simply give it the "Administrator" permission and move on with your life :D
+
 ## Licence
 The MIT License (MIT)
 
