@@ -17,9 +17,9 @@ You'll need node.js installed. NDR was built for node.js version 16, but may wor
 You can also run the noita discord relay using docker, either by building the container using the Dockerfile provided or by using the prebuilt container available at https://hub.docker.com/r/hashnv/noita-discord-relay.
 
 ```bash
-# Replace XXXXXXXXXX with your bot's discord token.
+# Replace XXXX with your bot's discord token.
 docker pull hashnv/noita-discord-relay:latest
-/usr/bin/docker run -e 'DISCORD_TOKEN=XXXXXXXXXX' -p '0.0.0.0:6667:6667' --rm hashnv/noita-discord-relay:latest
+/usr/bin/docker run -e 'DISCORD_TOKEN=XXXX' -p '0.0.0.0:6667:6667' --rm hashnv/noita-discord-relay:latest
 ```
 
 See 'example-systemd.service' for an example of how to run using systemd. 
@@ -43,7 +43,7 @@ sudo firewall-cmd --add-port 6667/tcp --perm
 sudo firewall-cmd --reload
 ```
 
-You may need to restart the NRD service, to do so run: `sudo systemctl restart noita-discord-relay.service`.
+You may need to restart the service, to do so run: `sudo systemctl restart noita-discord-relay.service`.
 
 ## Configuration
 You'll need to have a Discord bot already setup (https://discord.com/developers/applications) and obtain your bots access token. You will need to enable all three "Privileged Gateway Intents" so the bot can function.
