@@ -12,6 +12,39 @@ You'll need node.js installed. NDR was built for node.js version 16, but may wor
 4. Run `npm run build`
 5. At this point, the relay is "installed"
 
+### Using docker
+
+You can also run the noita discord relay using docker, either by building the container using the Dockerfile provided or by using the prebuilt container available at https://hub.docker.com/r/hashnv/noita-discord-relay.
+
+```bash
+# Replace XXXXXXXXXX with your bot's discord token.
+docker pull hashnv/noita-discord-relay:latest
+/usr/bin/docker run -e 'DISCORD_TOKEN=XXXXXXXXXX' -p '0.0.0.0:6667:6667' --rm hashnv/noita-discord-relay:latest
+```
+
+See 'example-systemd.service' for an example of how to run using systemd. 
+This systemd-service requires an EnvironmentFile in /etc/sysconfig/noita-system-relay to configure the `DISCORD_TOKEN` var,
+which should be set to something like this:
+
+```bash
+OPTIONS='-e "DISCORD_TOKEN=XXXXXXXXX"'
+```
+
+Reload your systemctl config by running `sudo systemctl daemon-reload`.
+Then, enable the service using `sudo systemctl enable --now noita-discord-relay.service`.
+This will set the service to start right now, as well as on system boot.
+
+Check the service status by running `systemctl status noita-discord-relay`.
+
+You may also need to open the port 6667 on your firewall. These days, most linux distributions run firewalld. In firewalld you can open the port with the following command:
+
+```bash
+sudo firewall-cmd --add-port 6667/tcp --perm
+sudo firewall-cmd --reload
+```
+
+You may need to restart the NRD service, to do so run: `sudo systemctl restart noita-discord-relay.service`.
+
 ## Configuration
 You'll need to have a Discord bot already setup (https://discord.com/developers/applications) and obtain your bots access token. You will need to enable all three "Privileged Gateway Intents" so the bot can function.
 
