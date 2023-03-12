@@ -1,0 +1,16 @@
+[Unit]
+Description=Noita Discord Relay
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+EnvironmentFile=/etc/sysconfig/noita-discord-relay
+ExecStartPre=-/usr/bin/docker stop %n
+ExecStartPre=-/usr/bin/docker rm %n
+ExecStartPre=/usr/bin/docker pull hashnv/noita-discord-relay:latest
+ExecStart=/usr/bin/docker run $OPTIONS -p '0.0.0.0:6667:6667' --rm --name %n hashnv/noita-discord-relay:latest
+
+[Install]
+WantedBy=multi-user.target
