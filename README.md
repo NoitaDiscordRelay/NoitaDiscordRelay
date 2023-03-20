@@ -31,12 +31,12 @@ Once you've got everything installed, built, and configured. You should simply b
 NDR can also be deployed with docker. You can build your own image using the Dockerfile provided,
 or use the prebuilt image available at https://hub.docker.com/r/hashnv/noita-discord-relay
 
-Example using the docker command (replace XXXXXXXX with your bot's discord token):
+Example using the docker command - replacing the `XXXXXXX` with your bot token:
 ```bash
 docker run -e 'DISCORD_TOKEN=XXXXXXXX' -p '0.0.0.0:6667:6667' --rm hashnv/noita-discord-relay:latest
 ```
 
-#### [Optional] Using systemd
+#### Using systemd
 
 Systemd allows us to create a long-running service that survives reboots.
 
@@ -45,7 +45,7 @@ Copy the contents of 'example-systemd.service' to  `/etc/systemd/system/noita-di
 sudo cp ./example-systemd.service /etc/systemd/system/noita-discord-relay.service
 ```
 
-Create an EnvironmentFile to configure the `DISCORD_TOKEN` var. (replace XXXXXXXX with your bot's discord token):
+Create an EnvironmentFile to configure the `DISCORD_TOKEN` var - replacing the `XXXXXXX` with your bot token:
 ```bash
 sudo tee /etc/sysconfig/noita-discord-relay <<< "OPTIONS='-e \"DISCORD_TOKEN=XXXXXXXX\"'"
 ```
