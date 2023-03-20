@@ -1,0 +1,8 @@
+version: "3"
+services:
+  noita-discord-relay:
+    build: .
+    ports:
+      - "6667:6667"
+    environment:
+      DISCORD_TOKEN: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
