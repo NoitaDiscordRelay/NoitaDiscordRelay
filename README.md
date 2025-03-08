@@ -24,7 +24,7 @@ npm start
 ```
 
 ## Running
-Once you've got everything installed, built, and configured. You should simply be able to double click your `start.bat` file and it will launch to bot. The final step is to configure your hosts file as described on the https://ndr.thcgaming.co.uk/ page. However, instead of using `157.245.29.152`, you will need to use `127.0.0.1`
+Once you've got everything installed, built, and configured. You should simply be able to double click your `start.bat` file and it will launch to bot. The final step is to configure your hosts file as described on the [https://ndr.thcgaming.co.uk/](https://web.archive.org/web/20210725181930/https://ndr.thcgaming.co.uk/) page. However, instead of using `157.245.29.152`, you will need to use `127.0.0.1`
 
 ### Using docker
 
